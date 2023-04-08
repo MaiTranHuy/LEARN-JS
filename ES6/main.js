@@ -227,11 +227,40 @@
 
 // console.log(html);
 
-//10. Modules
-import logger from "./logger.js";
+// //10. Modules
+// import logger from "./logger.js";
 
-// import { TYPE_LOG, TYPE_WARN, TYPE_ERROR } from "./constant.js";
+// // import { TYPE_LOG, TYPE_WARN, TYPE_ERROR } from "./constant.js";
 
-import * as constant from "./constant.js";
+// import * as constant from "./constant.js";
 
-logger("Message", TYPE_WARN);
+// logger("Message", TYPE_WARN);
+
+
+//13. Optional chaining (?.)
+ 
+const obj = {
+    name: 'huy',
+    cat: {
+        name: 'Mai Tran',
+        cat2: {
+            name: 'Mai Tran1'
+        ,
+        cat3: {
+            name: 'Mai Tran2'
+        }
+    }
+    }
+}
+
+if(obj?.cat?.cat2?.cat3){
+console.log(obj.cat.cat2.cat3.name);
+}
+
+const obj1 = {
+    getName(value){
+        console.log(value);
+    }
+}
+
+obj1.getName?.(123)
